@@ -100,21 +100,21 @@ else{
                             <div class="col-4 p-0">
                             <img src="../assets/images/admin.jpg" alt="" class="img-fluid admin-img rounded">
                             </div>
-                          <div class="col">
+                          <div class="col my-auto">
                               <div class="card" style="height:100%; box-shadow: none; border:none;">
                                   <div class="card-content ">
-                                      <span class="card-title">Sign In</span>
+                                      <span class="card-title text-center"><h1>Sign In</h1></span>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
                                                <div class="input-field col s12">
-                                                   <input id="username" type="text" name="username" class="validate" autocomplete="off" required >
-                                                   <label for="email">Username</label>
+                                                   <input id="username" type="text" name="username" class="validate pl-4 border border-teal rounded" autocomplete="off" required >
+                                                   <label for="email" class="pl-4">Username</label>
                                                </div>
                                                <div class="input-field col s12">
-                                                   <input id="password" type="password" class="validate" name="password" autocomplete="off" required>
-                                                   <label for="password">Password</label>
+                                                   <input id="password" type="password" class="validate pl-4 border border-teal rounded " name="password" autocomplete="off" required>
+                                                   <label for="password" class="pl-4" >Password</label>
                                                </div>
-                                               <div class="col s12 right-align m-t-sm">
+                                               <div class="col s12 text-center m-t-sm">
                                                 
                                                    <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn teal">
                                                </div>
