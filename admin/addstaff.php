@@ -45,9 +45,12 @@ $msg="Employee record added Successfully";
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
+        
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet"> 
@@ -124,10 +127,13 @@ error:function (){}
             
        <?php include('includes/sidebar.php');?>
    <main class="mn-inner">
-                <div class="row">
-                    <div class="col s12">
+    <div class="row">
+    <div class="col s12">
                         <div class="page-title">Add staff</div>
                     </div>
+    </div>
+                <div class="row">
+                    
                     <div class="col s12 m12 l12">
                         <div class="card">
                             <div class="card-content">
@@ -143,12 +149,11 @@ error:function (){}
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo $msg; ?> </div><?php }?>
 
 
- <div class="input-field col  s12">
+ <div class="input-field col s12">
 <label for="stfcode">Staff Code(Must be unique)</label>
 <input  name="stfcode" id="stfcode" onBlur="checkAvailabilitystfid()" type="text" autocomplete="off" required>
 <span id="stfid-availability" style="font-size:12px;"></span> 
 </div>
-
 
 <div class="input-field col m6 s12">
 <label for="name">Full name</label>

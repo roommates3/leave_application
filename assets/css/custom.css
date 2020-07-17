@@ -2,3 +2,15 @@
 .admin-signin{
     margin-top: 2%;
 }
+
+/* ADMIN DASHBOARD */
+.side-nav li > a > i{
+    float: none;
+    vertical-align: middle;
+}
+.side-nav{
+    width: 20%;
+}
+.mn-content.fixed-sidebar .mn-inner {
+    padding-left: 22%;
+}
