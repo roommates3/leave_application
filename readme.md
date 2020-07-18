@@ -1,9 +1,9 @@
 #PROJECT TITLE
-Leave management system (Web-based): Developed a leave management system for teaching and non-teaching staffs of IIIT Senapati, Manipur.
+Leave management system (Web-based): A leave management system for teaching and non-teaching staffs of IIIT Senapati, Manipur.
 
 #GETTING STARTED
 -Download the .tar file and extract it into "/var/www/html/" directory ( Ubuntu )
--First create the database "leave".
+-Create the database "leave".
 -Now go to the folder /leave_management_system/pgsql_file/
 -Restore the dump file in the database with extension .pgsql available in forder named as pgsql_file
 using "psql -U dbuser leave < leave.pgsql"
@@ -11,7 +11,7 @@ using "psql -U dbuser leave < leave.pgsql"
 
 #PREREQUISITES
 -Localhost Server- Apache2
--Pg-SQL
+-PgSQL
 -PHP
 
 #PROCEDURE
