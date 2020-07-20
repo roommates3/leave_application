@@ -23,13 +23,15 @@ else{
         
         
         <!-- Styles -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
+        
+        
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="../assets/plugins/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
 
             
         <!-- Theme Styles -->
@@ -70,7 +72,8 @@ else{
                             <div class="card-content">
                                 <span class="card-title">Departments Info</span>
                                  <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo $msg; ?> </div><?php }?>
-                                <table id="example" class="display responsive-table ">
+                                <div class="table-responsive">
+                                 <table id="example" class="display table ">
                                     <thead>
                                         <tr>
                                             <th>Sr no</th>
@@ -98,11 +101,12 @@ while($row_list=pg_fetch_array($query))
                                             <td><?php echo $row_list['did'];?></td>
                                             <td><?php echo $row_list['deptname'];?></td>
                                             <td><?php echo $row_list['deptshortname'];?></td>
-                                            <td><a href="editdepartment.php?deptid=<?php echo $row_list['id'];?>"><i class="material-icons">mode_edit</i></a></td>
+                                            <td><a href="editdepartment.php?deptid=<?php echo $row_list['id'];?>"><i class="fas fa-edit    "></i></a></td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>
                                 </table>
+</div>
                             </div>
                         </div>
                     </div>

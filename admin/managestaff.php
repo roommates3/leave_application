@@ -60,11 +60,11 @@ else{
        <?php include('includes/sidebar.php');?>
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Manage Staff</div>
                     </div>
                    
-                    <div class="col s12 m12 l12">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title">Staff Info</span>
@@ -72,7 +72,7 @@ else{
                                 <table id="example" class="display responsive-table ">
                                     <thead>
                                         <tr>
-                                            <th>Sr no</th>
+                                            <th class="text-right">Sr no</th>
                                             <th>Staff Id</th>
                                             <th>Full Name</th>
                                             <th>Department</th>
@@ -105,7 +105,7 @@ while($row_list=pg_fetch_array($query))
                                             <td width='100';><?php echo $row_list['phoneno'];?></td>
                                             <td width='70';><?php echo $row_list['pin'];?></td>
                                             <td width='200';><?php echo $row_list['permanent_address'];?></td>
-                                            <td width='50';><a href="editstaff.php?stfid=<?php echo $row_list['id'];?>"><i class="material-icons">mode_edit</i></a></td>
+                                            <td width='50';><a href="editstaff.php?stfid=<?php echo $row_list['id'];?>"><i class="fas fa-edit    "></i></a></td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>
@@ -115,7 +115,6 @@ while($row_list=pg_fetch_array($query))
                     </div>
                 </div>
             </main>
-         
         </div>
         <div class="left-sidebar-hover"></div>
         

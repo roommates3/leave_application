@@ -60,11 +60,11 @@ else{
        <?php include('includes/sidebar.php');?>
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title"> Not Approved Leave History</div>
                     </div>
                    
-                    <div class="col s12 m12 l12">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title">Not Approved Leave History</span>

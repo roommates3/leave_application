@@ -54,7 +54,7 @@
                       
                         <ul class="right col s9 m3 nav-right-menu">
                         
-                            <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i>
+                            <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="fas fa-bell    "></i>
 <?php 
 $isread=0;
 $sql = <<<EOF
@@ -66,7 +66,7 @@ $unreadcount=pg_num_rows($query);?>
 
 
                                 <span class="badge"><?php echo htmlentities($unreadcount);?></span></a></li>
-                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="fas fa-search    "></i></a></li>
                         </ul>
                         
                         <ul id="dropdown1" class="dropdown-content notifications-dropdown">

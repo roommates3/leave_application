@@ -62,11 +62,11 @@ else{
        <?php include('includes/sidebar.php');?>
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Approved Leave History</div>
                     </div>
                    
-                    <div class="col s12 m12 l12">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title">Approved Leave History</span>
@@ -80,7 +80,7 @@ else{
 
                                              <th width="180">Posting Date</th>                 
                                             <th>Status</th>
-                                            <th align="center">Action</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                  

@@ -81,12 +81,13 @@ $msg="Leave type record deleted";
                             <div class="card-content">
                                 <span class="card-title">Leave Type Info</span>
                                 <?php if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo $msg; ?> </div><?php }?>
-                                <table id="example" class="display responsive-table ">
+                                <div class="table-responsive">
+                                <table id="example" class="display table ">
                                     <thead>
                                         <tr>
-                                            <th>Sr no</th>
+                                            <th width="60">Sr no</th>
                                             <th width="130";>Leave Type</th>
-                                            <th width="500";>Description</th>
+                                            <th width="400";>Description</th>
                                             <th width="150">Creation Date</th>
                                             <th width="80";>Total leaves</th>
                                             <th>Action</th>
@@ -110,12 +111,13 @@ while($row_lists=pg_fetch_array($query))
                                             <td><?php echo $row_lists['description'];?></td>
                                             <td><?php echo $row_lists['creationdate'];?></td>
                                             <td><?php echo $row_lists['totalleaves'];?></td>
-                                            <td><a href="editleavetype.php?lid=<?php echo $row_lists['id'];?>"><i class="material-icons">mode_edit</i></a>
-                                            <a href="manageleavetype.php?del=<?php echo $row_lists['id'];?>" onclick="return confirm('Do you want to delete');"> <i class="material-icons">delete_forever</i></a> </td>
+                                            <td><a href="editleavetype.php?lid=<?php echo $row_lists['id'];?>"><i class="fas fa-edit fa-2x"></i></a>
+                                            <a href="manageleavetype.php?del=<?php echo $row_lists['id'];?>" onclick="return confirm('Do you want to delete');"><i class="fas fa-trash-alt fa-2x "></i> </a> </td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>
                                 </table>
+                                </div>
                             </div>
                         </div>
                     </div>

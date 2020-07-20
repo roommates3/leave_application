@@ -134,7 +134,7 @@ error:function (){}
     </div>
                 <div class="row">
                     
-                    <div class="col s12 m12 l12">
+                    <div class="col">
                         <div class="card">
                             <div class="card-content">
                                 <form id="example-form" method="post" name="addstf">
@@ -143,44 +143,44 @@ error:function (){}
                                         <section>
                                             <div class="wizard-content">
                                                 <div class="row">
-                                                    <div class="col m6">
+                                                    <div class="col-md-6">
                                                         <div class="row">
      <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo $error; ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo $msg; ?> </div><?php }?>
 
 
- <div class="input-field col s12">
+ <div class="input-field col-12">
 <label for="stfcode">Staff Code(Must be unique)</label>
 <input  name="stfcode" id="stfcode" onBlur="checkAvailabilitystfid()" type="text" autocomplete="off" required>
 <span id="stfid-availability" style="font-size:12px;"></span> 
 </div>
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="name">Full name</label>
 <input id="name" name="name" type="text" required>
 </div>
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="gmailid">Email</label>
 <input  name="gmailid" type="email" id="gmailid" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" onBlur="checkAvailabilityEmailid()" autocomplete="off" required>
 <span id="emailid-availability" style="font-size:12px;"></span> 
 </div>
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="password">Password</label>
 <input id="password" name="password" pattern=".{6,}" type="password" autocomplete="off" required>
 </div>
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="confirm">Confirm password</label>
 <input id="confirm" name="confirmpassword" pattern=".{6,}" type="password" autocomplete="off" required>
 </div>
 </div>
 </div>
                                                     
-<div class="col m6">
+<div class="col-md-6">
 <div class="row">
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <select  name="gender" autocomplete="off">
 <option value="">Gender...</option>                                          
 <option value="Male">Male</option>
@@ -189,14 +189,14 @@ error:function (){}
 </select>
 </div>
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="doj">Date of join</label>
 <input id="doj" name="doj" type="date" class="datepicker" autocomplete="off" >
 </div>
 
                                                     
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <select  name="department" autocomplete="off">
 <option value="">Department...</option>
 <?php 
@@ -215,28 +215,28 @@ if(pg_num_rows($query)>0)
 </select>
 </div>
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="address">Address</label>
 <input id="address" name="address" type="text" autocomplete="off" required>
 </div>
 
-<div class="input-field col m3 s12">
+<div class="input-field col-12 col-md-3">
 <label for="address">Pin</label>
 <input id="address" name="pin" pattern="^[1-9][0-9]{5}$" type="text" autocomplete="off" required>
 </div>
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="quarterno">Quarter Number</label>
-<input id="quarteno" name="quarterno" type="text" autocomplete="off" required>
+<input id="quarterno" name="quarterno" type="text" autocomplete="off" required>
  </div>
    
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="designation">Designation</label>
 <input id="designation" name="designation" type="text" autocomplete="off" required>
 </div>
 
                                                             
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="phone">Mobile number</label>
 <input id="phone" name="mobileno" type="tel" maxlength="10" autocomplete="off" required>
  </div>

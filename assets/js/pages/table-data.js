@@ -6,10 +6,10 @@ $(document).ready(function() {
             sLengthMenu: 'Show _MENU_',
             sLength: 'dataTables_length',
             oPaginate: {
-                sFirst: '<i class="material-icons">chevron_left</i>',
-                sPrevious: '<i class="material-icons">chevron_left</i>',
-                sNext: '<i class="material-icons">chevron_right</i>',
-                sLast: '<i class="material-icons">chevron_right</i>' 
+                sFirst: '<i class="fas fa-chevron-circle-left    "></i>',
+                sPrevious: '<i class="fas fa-chevron-circle-left  "></i>',
+                sNext: '<i class="fas fa-chevron-circle-right    "></i>',
+                sLast: '<i class="fas fa-chevron-circle-right    "></i>' 
         }
         }
     });

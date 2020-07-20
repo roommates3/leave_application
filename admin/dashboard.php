@@ -46,7 +46,7 @@ else{
     <main class="mn-inner">
         <div class="middle-content">
             <div class="row no-m-t no-m-b">
-                <div class="col s12 m12 l4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card stats-card">
                         <div class="card-content">
 
@@ -62,10 +62,13 @@ $stfcount=pg_num_rows($query);
 
                                 <span class="counter"><?php echo htmlentities($stfcount);?></span></span>
                         </div>
-                        <div id="sparkline-bar"></div>
+                        <!-- <div id="sparkline-bar"></div> -->
+                        <div class="progress stats-card-progress">
+                            <div class="determinate" style="width: 70%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col s12 m12 l4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card stats-card">
                         <div class="card-content">
 
@@ -79,10 +82,13 @@ $dptcount=pg_num_rows($query);
 ?>
                             <span class="stats-counter"><span class="counter"><?php echo htmlentities($dptcount);?></span></span>
                         </div>
-                        <div id="sparkline-line"></div>
+                        <!-- <div id="sparkline-line"></div> -->
+                        <div class="progress stats-card-progress">
+                            <div class="determinate" style="width: 70%"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="col s12 m12 l4">
+                <div class="col-12 col-sm-12 col-md-4">
                     <div class="card stats-card">
                         <div class="card-content">
                             <span class="card-title">Listed leave Type</span>
@@ -105,12 +111,13 @@ $leavtypcount=pg_num_rows($query);
             </div>
 
             <div class="row no-m-t no-m-b">
-                <div class="col s12 m12 l12">
+                <div class="col">
                     <div class="card invoices-card">
                         <div class="card-content">
 
                             <span class="card-title">Latest Leave Applications</span>
-                            <table id="example" class="display responsive-table ">
+                            <div class="table-responsive">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>Sr no</th>
@@ -119,11 +126,11 @@ $leavtypcount=pg_num_rows($query);
 
                                         <th width="180">Posting Date</th>
                                         <th>Status</th>
-                                        <th align="center">Action</th>
+                                        <th class="text-center">Action</th>
                                     </tr>
                                 </thead>
 
-                                <tbody>
+                                <tbody >
                                     <?php $sql =<<<EOF
 SELECT leavetable.id as lid,staff.name,staff.sid,staff.id,leavetable.leavetype,leavetable.postingdate,leavetable.Status,leavetable.fwdstatus from leavetable join staff on leavetable.sid=staff.sid where staff.designation='HOD' order by lid desc limit 6;
 EOF;
@@ -136,7 +143,7 @@ while($row_lists=pg_fetch_array($query))
       ?>
 
                                     <tr>
-                                        <td> <b><?php echo $cnt;?></b></td>
+                                        <td  class="text-center"> <b><?php echo $cnt;?></b></td>
                                         <td><a href="editstaff.php?stfid=<?php echo $row_lists['id'];?>"
                                                 target="_blank"><?php echo $row_lists['name'];?>(<?php echo $row_lists['sid'];?>)</a>
                                         </td>
@@ -150,13 +157,14 @@ while($row_lists=pg_fetch_array($query))
                                             <?php } if($stats==0)  { ?>
                                             <span style="color: blue">waiting for approval</span>
                                             <?php } ?> </td>
-                                        <td><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>"
+                                        <td  class="text-center pt-4"><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>"
                                                 class="waves-effect waves-light btn blue m-b-xs"> View Details</a></td>
-
+                                                
                                     </tr>
                                     <?php $cnt++;} }?>
                                 </tbody>
                             </table>
+                            </div>
                         </div>
                     </div>
                 </div>
