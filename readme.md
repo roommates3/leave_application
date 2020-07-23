@@ -27,5 +27,7 @@ using "psql -U dbuser leave < leave.pgsql"
         3- loginId: rohit.kesarwani9898@gmail.com
             password: Test45$%
         4- loginId: shrishkumar@gmail.com
-            password: Test12!@
+            password: shrish12
+        5- loginId: naman@gmail.com
+            password: naman@#
 
