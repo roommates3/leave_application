@@ -50,9 +50,11 @@ $error="Your current password is wrong";
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet"> 
@@ -98,35 +100,35 @@ while ($row=pg_fetch_array($query1))
   
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Change Password</div>
                     </div>
-                    <div class="col s12 m12 l6">
+                    <div class="col-12 col-lg-6">
                         <div class="card">
                             <div class="card-content">
                               
                                 <div class="row">
-                                    <form class="col s12" name="chngpwd" method="post">
+                                    <form class="col-12" name="chngpwd" method="post">
                                           <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
                                         <div class="row">
-                                            <div class="input-field col s12">
+                                            <div class="input-field col-12">
 <input id="password" type="password"  class="validate" autocomplete="off" name="password"  required>
-                                                <label for="password">Current Password</label>
+                                                <label for="password" style="margin-left:-90%;">Current Password</label>
                                             </div>
 
-  <div class="input-field col s12">
+  <div class="input-field col-12">
  <input id="password" type="password" name="newpassword" class="validate" autocomplete="off" required>
-                                                <label for="password">New Password</label>
+                                                <label for="password" style="margin-left:-90%;">New Password</label>
                                             </div>
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <input id="password" type="password" name="confirmpassword" class="validate" autocomplete="off" required>
- <label for="password">Confirm Password</label>
+ <label for="password" style="margin-left:-90%;">Confirm Password</label>
 </div>
 
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <button type="submit" name="change" class="waves-effect waves-light btn indigo m-b-xs" onclick="return valid();">Change</button>
 
 </div>

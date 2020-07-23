@@ -72,7 +72,13 @@ $msg="Staff record updated Successfully";
 
 
 
-<?php 
+
+</head>
+    <body>
+  <?php include('includes/header.php');?>
+            
+       <?php include('includes/sidebar.php');?>
+       <?php 
 $eid=intval($_GET['stfid']);
 $sql =<<<EOF
 SELECT * from staff where id='$eid';
@@ -83,17 +89,12 @@ if(pg_num_rows($query) > 0)
 {
 while($row_lists=pg_fetch_array($query))
 {               ?> 
-</head>
-    <body>
-  <?php include('includes/header.php');?>
-            
-       <?php include('includes/sidebar.php');?>
    <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Update staff</div>
                     </div>
-                    <div class="col s12 m12 l12">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <form id="example-form" method="post" name="updatstf">
@@ -104,29 +105,29 @@ while($row_lists=pg_fetch_array($query))
                                         <section>
                                             <div class="wizard-content">
                                                 <div class="row">
-                                                    <div class="col m6">
+                                                    <div class="col-md-6">
                                                         <div class="row">
 
- <div class="input-field col  s12">
+<div class="input-field col-12">
 <label for="stfcode">Staff Code(Must be unique)</label>
 <input  name="stfcode" id="stfcode" value="<?php echo $row_lists['sid'];?>" type="text" autocomplete="off" readonly required>
 <span id="stfid-availability" style="font-size:12px;"></span> 
 </div>
 
 
-<div class="input-field col m12 s12">
+<div class="input-field col-12">
 <label for="name">Full name</label>
 <input id="name" name="name" value="<?php echo $row_lists['name'];?>"  type="text" required>
 </div>
 
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="email">Email</label>
 <input  name="email" type="email" id="email" value="<?php echo $row_lists['gmailid'];?>" readonly autocomplete="off" required>
 <span id="emailid-availability" style="font-size:12px;"></span> 
 </div>
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <label for="phone">Mobile number</label>
 <input id="phone" name="mobileno" type="tel" value="<?php echo $row_lists['phoneno'];?>" maxlength="10" autocomplete="off" required>
  </div>
@@ -134,9 +135,9 @@ while($row_lists=pg_fetch_array($query))
 </div>
 </div>
 
-<div class="col m6">
+<div class="col col-md-6">
 <div class="row">
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <select  name="gender" autocomplete="off" >
 <option value="<?php echo $row_lists['gender'];?>"><?php echo $row_lists['gender'];?></option>                                          
 <option value="Male" >Male</option>
@@ -145,29 +146,29 @@ while($row_lists=pg_fetch_array($query))
 </select>
 </div>
 
-<div class="input-field col m6 s12">
+<div class="input-field col-12 col-md-6">
 <label for="joindate">Date of Join</label>
 <input id="joindate" name="doj"  class="datepicker" value="<?php echo $row_lists['doj'];?>" >
 </div>
 
    
-<div class="input-field col m12 s12">
+<div class="input-field col-12 col-md-12">
 <label for="designation">Designation</label>
 <input id="designation" name="designation" type="text" value="<?php echo $row_lists['designation'];?>" autocomplete="off" required>
 </div>
 
-<div class="input-field col m12 s12">
+<div class="input-field col-12 col-md-12">
 <label for="address">Address</label>
 <input id="address" name="address" type="text"  value="<?php echo $row_lists['permanent_address'];?>" autocomplete="off" required>
 </div>
                                                             
-<div class="input-field col m12 s12">
+<div class="input-field col-12 col-md-12">
 <label for="address">Pin</label>
 <input id="address" name="pincode" type="text"  value="<?php echo $row_lists['pin'];?>" autocomplete="off" required>
 </div>
 
                                                         
-<div class="input-field col s12">
+<div class="input-field col-12">
 <button type="submit" name="update"  id="update" class="waves-effect waves-light btn indigo m-b-xs">UPDATE</button>
 
 </div>

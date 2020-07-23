@@ -51,6 +51,9 @@ else{
         <meta name="author" content="Steelcoders" />
 
         <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
@@ -142,10 +145,10 @@ $_SESSION['dept']=$row1;
 
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
                     <li>&nbsp;</li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="material-icons">account_box</i>Staff Login</a></li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i class="material-icons">account_box</i>Staff Password Recovery</a></li>
+                    <li class="no-padding"><a class="waves-effect waves-grey" href="index.php"><i class="fas fa-portrait    "></i>Staff Login</a></li>
+                    <li class="no-padding"><a class="waves-effect waves-grey" href="forgot-password.php"><i class="fas fa-portrait    "></i>Staff Password Recovery</a></li>
 
-                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="material-icons">account_box</i>Admin Login</a></li>
+                       <li class="no-padding"><a class="waves-effect waves-grey" href="admin/"><i class="fas fa-portrait    "></i>Admin Login</a></li>
 
                 </ul>
                 </div>

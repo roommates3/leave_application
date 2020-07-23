@@ -21,9 +21,11 @@ else{
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
         <link href="assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet">
@@ -48,11 +50,12 @@ if (pg_num_rows($query1)>0)
     {   $dept=$row_list['did'];
         $d1=$row_list['deptshortname'];
         $fwd=$row_list['fwdstatus'];
+        // echo $fwd;
 ?>
 
     <body>
  
-    <?php while($row_list['designation'] == 'HOD')
+    <?php if($row_list['designation'] == 'HOD')
     { ?>
     <?php include('includes/hodheader.php');?>
 
@@ -62,7 +65,7 @@ if (pg_num_rows($query1)>0)
         <main class="mn-inner">
             <div class="middle-content">
                 <div class="row no-m-t no-m-b">
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-md-6 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -75,7 +78,9 @@ $sql =<<<EOF
 SELECT leavetable.id from staff join leavetable on staff.sid=leavetable.sid join department on department.did=staff.did and department.deptshortname='$d1' where not staff.sid='$sid' and not staff.designation='$des';
 EOF;
 $query = pg_query($sql);
+// echo $query;
 $tlcount = pg_num_rows($query);
+// echo $tlcount;
 ?>
 
                                     <span class="counter"><?php echo $tlcount;?></span></span>
@@ -85,7 +90,7 @@ $tlcount = pg_num_rows($query);
                     </div>
 
 <!-- =============================================================================================================                     -->
-                        <div class="col s12 m12 l3">
+                        <div class="col-12 col-md-6 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -105,7 +110,7 @@ $Clcount=pg_num_rows($query);
                         </div>
                     </div>
 <!-- =============================================================================================================                     -->
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-md-6 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -127,7 +132,7 @@ $sclcount=pg_num_rows($query);
 
 
 
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-md-6 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                                 <span class="card-title">Not Approved Leaves</span>

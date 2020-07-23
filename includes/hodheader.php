@@ -48,13 +48,13 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3">      
+                        <div class="header-title col-11 ml-0">      
                             <span class="chapter-title">Leave Management System | Staff</span>
                         </div>
                       
-                        <ul class="right col s9 m3 nav-right-menu">
+                        <ul class="right col-1 nav-right-menu " >
                         
-                            <li class="hide-on-small-and-down"><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="material-icons">notifications_none</i>
+                            <li class="hide-on-small-and-down" ><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="fas fa-bell    "></i>
 <?php 
 $isread=0;
 $sql = <<<EOF
@@ -66,7 +66,7 @@ $unreadcount=pg_num_rows($query);?>
 
 
                                 <span class="badge"><?php echo htmlentities($unreadcount);?></span></a></li>
-                            <li class="hide-on-med-and-up"><a href="javascript:void(0)" class="search-toggle"><i class="material-icons">search</i></a></li>
+                            <li class="hide-on-med-and-up" style="float: unset;"><a href="javascript:void(0)" class="search-toggle"><i class="fas fa-search    "></i></a></li>
                         </ul>
                         
                         <ul id="dropdown1" class="dropdown-content notifications-dropdown">
@@ -88,7 +88,7 @@ while($row_lists=pg_fetch_array($query))
                                     <li>
                                         <a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>">
                                         <div class="notification">
-                                            <div class="notification-icon circle cyan"><i class="material-icons">done</i></div>
+                                            <div class="notification-icon circle cyan"><i class="fas fa-check    "></i></div>
                                             <div class="notification-text"><p><b><?php echo $row_lists['name'];?><br />(<?php echo $row_lists['sid'];?>)</b> applied for leave</p><span>at <?php echo $row_lists['postingdate'];?></b></span></div>
                                         </div>
                                         </a>

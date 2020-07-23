@@ -48,7 +48,7 @@
                                 <span class="material-design-hamburger__layer"></span>
                             </a>
                         </section>
-                        <div class="header-title col s3"> 
+                        <div class="header-title col-3"> 
                             <span class="chapter-title">Leave Management System | Staff</span>
                         </div>
                     </div>

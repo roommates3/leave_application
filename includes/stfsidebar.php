@@ -40,16 +40,16 @@ while($row_list=pg_fetch_array($query))
 
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
                 <?php if ($desig=='HOD'){?>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="dashboard.php"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
+                    <li class=""><a class="waves-effect waves-grey" href="dashboard.php"><i class="fas fa-building    "></i>Dashboard</a></li>
                 <?php } elseif($desig=='Director') {?>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="stf-dashboard.php"><i class="material-icons">settings_input_svideo</i>Dashboard</a></li>
+                    <li class=""><a class="waves-effect waves-grey" href="stf-dashboard.php"><i class="fas fa-building    "></i>Dashboard</a></li>
                 <?php } ?>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="myprofile.php"><i class="material-icons">account_box</i>My Profiles</a></li>
-                    <li class="no-padding"><a class="waves-effect waves-grey" href="stf-changepassword.php"><i class="material-icons">settings_input_svideo</i>Change Password</a></li>
+                    <li class="p-0"><a class="waves-effect waves-grey" href="myprofile.php"><i class="fas fa-portrait    "></i>My Profiles</a></li>
+                    <li class="no-padding"><a class="waves-effect waves-grey" href="stf-changepassword.php"><i class="fas fa-user-lock    "></i>Change Password</a></li>
                     
                     <?php if ($desig!='Director'){?>     
                         <li class="no-padding">
-                            <a class="collapsible-header waves-effect waves-grey"><i class="material-icons">apps</i>Leaves<i class="nav-drop-icon material-icons">keyboard_arrow_right</i></a>
+                            <a class="collapsible-header waves-effect waves-grey"><i class="fas fa-calendar-alt    "></i>Leaves<i class="fa fa-chevron-right pl-3" aria-hidden="true"></i></a>
                             <div class="collapsible-body">
                                 <ul>
                                     <li><a href="apply-leave.php">Apply Leave</a></li>
@@ -62,7 +62,7 @@ while($row_list=pg_fetch_array($query))
 
 
                             <li class="no-padding">
-                                <a class="waves-effect waves-grey" href="logout.php"><i class="material-icons">exit_to_app</i>Sign Out</a>
+                                <a class="waves-effect waves-grey" href="logout.php"><i class="fas fa-sign-out-alt    "></i> Sign Out</a>
                             </li>  
                 </ul>
         </div>
