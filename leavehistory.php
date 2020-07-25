@@ -34,7 +34,7 @@ else{
 
     <!-- Theme Styles -->
     <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/stfcustom.css" rel="stylesheet" type="text/css" />
     <style>
     .errorWrap {
         padding: 10px;
@@ -297,7 +297,7 @@ if(pg_num_rows($query) > 0)
 while($row_lists=pg_fetch_array($query))
 {               ?>
                                 <tr>
-                                    <td> <?php echo $cnt;?></td>
+                                    <td width="50"> <?php echo $cnt;?></td>
                                     <td><?php echo $row_lists['leavetype'];?></td>
                                     <td><?php echo $row_lists['todate'];?></td>
                                     <td><?php echo $row_lists['fromdate'];?></td>

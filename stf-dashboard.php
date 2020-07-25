@@ -34,7 +34,7 @@ else{
         	
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/stfcustom.css" rel="stylesheet" type="text/css"/>
         
     </head>
     <?php 
@@ -198,7 +198,7 @@ while($row_lists=pg_fetch_array($query))
 
           <td>
           <?php //if($fwd==1){?>
-          <td><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>" class="waves-effect waves-light btn blue m-b-xs"  > view details</a></td>
+          <td><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>" class="waves-effect waves-light btn indigo m-b-xs"  > view details</a></td>
           <?php //} ?>
                                     </tr>
                                          <?php $cnt++;} }?>

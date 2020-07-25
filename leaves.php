@@ -38,7 +38,7 @@ $query1=pg_query($stmt);
                 <link href="assets/plugins/google-code-prettify/prettify.css" rel="stylesheet" type="text/css"/>  
         <!-- Theme Styles -->
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/stfcustom.css" rel="stylesheet" type="text/css"/>
 <style>
         .errorWrap {
     padding: 10px;
