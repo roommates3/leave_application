@@ -47,7 +47,7 @@ else{
         <div class="middle-content">
             <div class="row no-m-t no-m-b">
                 <div class="col-12 col-sm-12 col-md-4">
-                    <div class="card stats-card">
+                    <div class="card stats-card rounded-lg">
                         <div class="card-content">
 
                             <span class="card-title">Total Regd Staff</span>
@@ -69,7 +69,7 @@ $stfcount=pg_num_rows($query);
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-4">
-                    <div class="card stats-card">
+                    <div class="card stats-card rounded-lg">
                         <div class="card-content">
 
                             <span class="card-title">Listed Departments </span>
@@ -89,7 +89,7 @@ $dptcount=pg_num_rows($query);
                     </div>
                 </div>
                 <div class="col-12 col-sm-12 col-md-4">
-                    <div class="card stats-card">
+                    <div class="card stats-card rounded-lg">
                         <div class="card-content">
                             <span class="card-title">Listed leave Type</span>
                             <?php
@@ -112,7 +112,7 @@ $leavtypcount=pg_num_rows($query);
 
             <div class="row no-m-t no-m-b">
                 <div class="col">
-                    <div class="card invoices-card">
+                    <div class="card invoices-card rounded-lg">
                         <div class="card-content">
 
                             <span class="card-title">Latest Leave Applications</span>
@@ -158,7 +158,7 @@ while($row_lists=pg_fetch_array($query))
                                             <span style="color: blue">waiting for approval</span>
                                             <?php } ?> </td>
                                         <td  class="text-center pt-4"><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>"
-                                                class="waves-effect waves-light btn blue m-b-xs"> View Details</a></td>
+                                                class="waves-effect waves-light btn red m-b-xs rounded-pill"> View Details</a></td>
                                                 
                                     </tr>
                                     <?php $cnt++;} }?>

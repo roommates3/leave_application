@@ -118,7 +118,7 @@ while($row_lists=pg_fetch_array($query))
 
                                              </td>
 
-           <td><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>" class="waves-effect waves-light btn blue m-b-xs"  > View Details</a></td>
+           <td><a href="leave-details.php?leaveid=<?php echo $row_lists['lid'];?>" class="waves-effect waves-light btn red m-b-xs rounded-pill"  > View Details</a></td>
                                     </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>

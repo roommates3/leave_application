@@ -135,7 +135,7 @@ error:function (){}
                 <div class="row">
                     
                     <div class="col">
-                        <div class="card">
+                        <div class="card rounded-lg">
                             <div class="card-content">
                                 <form id="example-form" method="post" name="addstf">
                                     <div>
@@ -243,7 +243,7 @@ if(pg_num_rows($query)>0)
 
                                                         
 <div class="input-field col s12">
-<button type="submit" name="add" onclick="return valid();" id="add" class="waves-effect waves-light btn indigo m-b-xs">ADD</button>
+<button type="submit" name="add" onclick="return valid();" id="add" class="waves-effect waves-light btn red m-b-xs rounded-pill">ADD</button>
 
 </div>
 

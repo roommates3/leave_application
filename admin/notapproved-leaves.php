@@ -109,7 +109,7 @@ while($row_list=pg_fetch_array($query))
                                                 <?php } if($stats==0)  { ?>
                                                 <span style="color: blue">waiting for approval</span>
                                                 <?php } ?> </td>
-                                            <td><a href="leave-details.php?leaveid=<?php echo $row_list['lid'];?>" class="waves-effect waves-light btn blue m-b-xs"  > View Details</a></td>
+                                            <td><a href="leave-details.php?leaveid=<?php echo $row_list['lid'];?>" class="waves-effect waves-light btn red m-b-xs rounded-pill"  > View Details</a></td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>

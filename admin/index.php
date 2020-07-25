@@ -42,9 +42,11 @@ else{
         
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
         <link type="text/css" rel="stylesheet" href="../assets/plugins/materialize/css/materialize.min.css"/>
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="../assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">        
         <link href="../assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="../assets/css/custom.css" rel="stylesheet" type="text/css"/>
@@ -89,7 +91,7 @@ else{
         <div class="container">
         <div class="row text-center">
             <div class="col">
-            <h1><a href="../index.php">Leave Management System | Admin Login</a></h1>
+            <h3 class="text-capitalize"><a href="../index.php" >Leave Management System | Admin Login</a></h3>
             </div>
             </div>
         </div>
@@ -116,7 +118,7 @@ else{
                                                </div>
                                                <div class="col s12 text-center m-t-sm">
                                                 
-                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn teal">
+                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo">
                                                </div>
                                            </form>
                                       </div>
