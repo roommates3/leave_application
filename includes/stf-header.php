@@ -56,9 +56,10 @@
                         
                             <li class="hide-on-small-and-down" ><a href="javascript:void(0)" data-activates="dropdown1" class="dropdown-button dropdown-right show-on-large"><i class="fas fa-bell    "></i>
 <?php 
-$isread=0;
+$isread=1;
+$fwd=1;
 $sql = <<<EOF
-SELECT id from leavetable where IsRead='$isread';
+SELECT id from leavetable where IsRead='$isread' and fwdstatus='$fwd';
 EOF;
 $query=pg_query($sql);
 $result=pg_fetch_all($query);
@@ -74,9 +75,10 @@ $unreadcount=pg_num_rows($query);?>
                                 <ul>
                                     <li class="notification-drop-title">Notifications</li>
 <?php 
-$isread=0;
+$isread=1;
+$fwd=1;
 $sql = <<<EOF
-SELECT leavetable.id as lid,staff.name,staff.sid,leavetable.PostingDate from leavetable join staff on leavetable.sid=staff.sid where leavetable.IsRead='$isread';
+SELECT leavetable.id as lid,staff.name,staff.sid,leavetable.PostingDate from leavetable join staff on leavetable.sid=staff.sid where leavetable.IsRead='$isread' and leavetable.fwdstatus='$fwd';
 EOF;
 $query=pg_query($sql);
 $result=pg_fetch_all($query);
