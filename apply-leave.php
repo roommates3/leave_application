@@ -16,8 +16,19 @@ $fromdate=$_POST['fromdate'];
 $todate=$_POST['todate'];
 $description=$_POST['description'];  
 $status=0;
+$sqlmain=<<<EOF
+select designation from staff where sid=$sid;
+EOF;
+$querymain= pg_query($sqlmain);
+$rowmain=pg_fetch_array($querymain);
+$des=$rowmain['designation'];
+if($des=='HOD'){
+$isread=1;
+$fwdstatus=1;
+}else{
 $isread=0;
 $fwdstatus=0;
+}
 $noofdays=$_POST['nod'];
 $prefromdate=$_POST['pfromdate'];
 $pretodate=$_POST['ptodate'];
