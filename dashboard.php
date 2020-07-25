@@ -177,14 +177,15 @@ $clcount=pg_num_rows($query);
                                     </thead>
                                  
                                     <tbody>
-<?php $sql =<<<EOF
+<?php $sqlNew =<<<EOF
 SELECT leavetable.id as lid,staff.name,staff.sid,staff.id,leavetable.leavetype,leavetable.postingdate,leavetable.Status from leavetable join staff on leavetable.sid=staff.sid where staff.did='$dept' and not staff.sid='$sid' and not staff.designation='$des' order by lid desc limit 6;
 EOF;
-$query=pg_query($sql);
+$queryNew=pg_query($sqlNew);
+// echo $queryNew;
 $cnt=1;
-if(pg_num_rows($query)> 0)
+if(pg_num_rows($queryNew)> 0)
 {
-while($row_lists=pg_fetch_array($query))
+while($row_lists=pg_fetch_array($queryNew))
 {         
       ?>  
 
