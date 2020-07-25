@@ -53,7 +53,7 @@ if (pg_num_rows($query1)>0)
     <body>
  
     
-    <?php include('includes/hodheader.php');?>
+    <?php include('includes/stf-header.php');?>
 
     <?php include('includes/stfsidebar.php');?>
 
