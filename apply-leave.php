@@ -92,6 +92,15 @@ $query3=pg_query($sql3);
         <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet"> 
         <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/af78f6c7a9.js" crossorigin="anonymous"></script>
+        <link type="text/css" rel="stylesheet" href="assets/plugins/materialize/css/materialize.min.css"/>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="assets/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet"> 
+        <link href="assets/css/alpha.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/stfcustom.css" rel="stylesheet" type="text/css"/>
   <style>
         .errorWrap {
     padding: 10px;
@@ -226,22 +235,22 @@ if (pg_num_rows($query11)>0)
        
    <main class="mn-inner">
                 <div class="row row-card">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Apply for Leave</div>
                     </div>
-                    <div class="col s12 m12 rf1">
+                    <div class="col-12 rf1">
                         <div class="card1">
                             <div class="card-content1">
 
                                 <form id="example-form" method="post" name="addstf">
-                                    <div class="row">
+                                    <!-- <div class="row"> -->
                                         <h3><b><strong>Apply for Leave</b></strong></h3>
                                         <h6><b>*</b> - Fill "No" if not needed.</h6>
-                                        <section>
-                                            <div class="wizard-content">
-                                                <div class="row row-card2">
-                                                    <div class="col m12">
-                                                        <div class="row">
+                                        <!-- <section> -->
+                                            <!-- <div class="wizard-content w-100"> -->
+                                                <!-- <div class="row row-card2">
+                                                    <div class="col-12 col-md-12"> -->
+                                                        <!-- <div class="row"> -->
      <?php if($error){?><div class="errorWrap"><strong>ERROR </strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong>:<?php echo htmlentities($msg); ?> </div><?php }?>
 
@@ -249,12 +258,12 @@ if (pg_num_rows($query11)>0)
 
 
 <div class="row">
-<div class="col m12">
-    <div class="row row-a">
-        <div class="input-field col m1 s12">
+<div class="col-12 col-md-12">
+    <div class="row">
+        <div class="input-field col-12 col-md-1">
             <label for="c1"><b><strong>1.</b></strong></label>
         </div>
-        <div class="input-field col m3 s12">
+        <div class="input-field col-12 col-md-3">
             <select  name="title" autocomplete="off">
                 <option value="">Dr./ Mr./ Ms.</option>                                          
                 <option value="Dr."><b>Dr.</b></option>
@@ -263,22 +272,22 @@ if (pg_num_rows($query11)>0)
             </select>
         </div>
         
-        <div class="input-field col m8 s12">
-            <label for="fullname"><b><strong>Name of Applicant</b></strong></label>
+        <div class="input-field col-12 col-md-8">
+            <label class="active" for="fullname"><b><strong>Name of Applicant</b></strong></label>
             <input id="fullname" name="fullname" value="<?php echo $row['name'];?>"  type="text" required>
         </div>
     </div>
 
     <div class="row row-b">
-        <div class="input-field col m1 s12">
+        <div class="input-field col-12 col-md-1">
             <label for="c1"><b><strong>2.</b></strong></label>
         </div>
-        <div class="input-field col m3 s12">
-        <label for="designation"><b><strong>Designation</b></strong></label>
+        <div class="input-field col-12 col-md-3">
+        <label class="active" for="designation"><b><strong>Designation</b></strong></label>
         <input id="designation" name="designation"  value="<?php echo $row['designation'];?>" type="text" autocomplete="off" required>
         </div>
 
-        <div class="input-field col m8 s12">
+        <div class="input-field col-12 col-md-8">
         <select  name="department" autocomplete="off">
         <option value="<?php echo $dep; ?>"><?php echo $dep;?></option>
         </select>
@@ -286,10 +295,10 @@ if (pg_num_rows($query11)>0)
     </div>
 
     <div class="row row-c">
-        <div class="input-field col m1 s12">
+        <div class="input-field col-12 col-md-1">
             <label ><b><strong>3.</b></strong></label>
         </div>
-        <div class="input-field col m3 s12">
+        <div class="input-field col-12 col-md-3">
         <select  name="leavetype" autocomplete="off">
         <option value=""><b><strong>Select leave type...</b></strong></option>
 <?php 
@@ -307,114 +316,114 @@ while($row_lists=pg_fetch_array($query))
         </select>
         </div>
 
-                <div class="input-field col m3 s12">
+                <div class="input-field col-12 col-md-3">
                 <label for="fromdate"><b><strong>FromDate</b></strong></label>
                 <input id="from_date" name="fromdate"  class="datepicker" type="date" onchange="cal()" value="" required >
                 </div>
 
-                <div class="input-field col m3 s12">
+                <div class="input-field col-12 col-md-3">
                 <label for="todate"><b><strong>ToDate</b></strong></label>
                 <input id="to_date" name="todate"  class="datepicker" type="date" onchange="cal()" value="" required >
                 </div>
 
-        <div class="input-field col m2 s12">
+        <div class="input-field col-12 col-md-2">
         <label for="nod"><b><strong>No. of Days</b></strong></label>
         <input id="nod1" name="nod" type="text" value="" required >
         </div>
-</div>
+    </div>
 
-<div class="row row-d">
-<div class="input-field col m1 s12">
-            <label><b><strong>*4.</b></strong></label>
-        </div>
-    <div class="input-field col m2 s12">
-        <label><b><strong>Holidays(Prefixing / Suffixing)</b></strong></label>
+    <div class="row row-d">
+    <div class="input-field col-12 col-md-1">
+                <label><b><strong>*4.</b></strong></label>
             </div>
-
-                <div class="input-field col m1 s12">
-                <label><b><strong>Prefix :</b></strong></label>
+        <div class="input-field col-12 col-md-2">
+            <label><b><strong>Holidays(Prefixing / Suffixing)</b></strong></label>
                 </div>
 
-                    <div class="input-field col m3 s12">
-                    <label for="fromdate"><b><strong>FromDate</b></strong></label>
-                    <input id="from_date1" name="pfromdate"  class="datepicker" type="date" onchange="cal()" value="NULL" required >
+                    <div class="input-field col-12 col-md-1">
+                    <label><b><strong>Prefix :</b></strong></label>
                     </div>
 
-                <div class="input-field col m3 s12">
-                <label for="todate"><b><strong>ToDate</b></strong></label>
-                <input id="to_date1" name="ptodate"  class="datepicker" type="date" onchange="cal()" value="NULL" required >
-                </div>
+                        <div class="input-field col-12 col-md-3">
+                        <label class="active" for="fromdate"><b><strong>FromDate</b></strong></label>
+                        <input id="from_date1" name="pfromdate"  class="datepicker" type="date" onchange="cal()" value="NULL" required >
+                        </div>
 
-            <div class="input-field col m2 s12">
-        <label for="nod"><b><strong>No. of Days</b></strong></label>
-    <input id="nod11" name="pnod" type="text" value="NULL" required >
+                    <div class="input-field col-12 col-md-3">
+                    <label class="active" for="todate"><b><strong>ToDate</b></strong></label>
+                    <input id="to_date1" name="ptodate"  class="datepicker" type="date" onchange="cal()" value="NULL" required >
+                    </div>
+
+                <div class="input-field col-12 col-md-2">
+            <label class="active" for="nod"><b><strong>No. of Days</b></strong></label>
+        <input id="nod11" name="pnod" type="text" value="NULL" required >
+        </div>
     </div>
-</div>
 
-<div class="row row-d1">
-        <div class="input-field col m3 s12">
-        <label><b><strong>                               </b></strong></label>
-        </div>
+    <div class="row row-d1">
+            <div class="input-field col-12 col-md-3">
+            <label><b><strong>                               </b></strong></label>
+            </div>
 
-        <div class="input-field col m1 s12">
-        <label><b><strong>Suffix :</b></strong></label>
-        </div>
+            <div class="input-field col-12 col-md-1">
+            <label><b><strong>Suffix :</b></strong></label>
+            </div>
 
-        <div class="input-field col m3 s12">
-        <label for="fromdate"><b><strong>FromDate</b></strong></label>
-        <input id="from_date2" name="sfromdate"  class="datepicker" type="text" onchange="cal()" value="NULL" required >
-        </div>
+            <div class="input-field col-12 col-md-3">
+            <label class="active" for="fromdate"><b><strong>FromDate</b></strong></label>
+            <input id="from_date2" name="sfromdate"  class="datepicker" type="text" onchange="cal()" value="NULL" required >
+            </div>
 
-        <div class="input-field col m3 s12">
-        <label for="todate"><b><strong>ToDate</b></strong></label>
-        <input id="to_date2" name="stodate"  class="datepicker" type="text" onchange="cal()" value="NULL" required >
-        </div>
+            <div class="input-field col-12 col-md-3">
+            <label class="active" for="todate"><b><strong>ToDate</b></strong></label>
+            <input id="to_date2" name="stodate"  class="datepicker" type="text" onchange="cal()" value="NULL" required >
+            </div>
 
-        <div class="input-field col m2 s12">
-        <label for="nod"><b><strong>No. of Days</b></strong></label>
-        <input id="nod12" name="snod" type="text" value="NULL" required >
-        </div>
-</div>
-
-<div class="row row-e">
-    <div class="input-field col m1 s12">
-        <label><b><strong>5.</b></strong></label>
+            <div class="input-field col-12 col-md-2">
+            <label class="active" for="nod"><b><strong>No. of Days</b></strong></label>
+            <input id="nod12" name="snod" type="text" value="NULL" required >
+            </div>
     </div>
-    <div class="input-field col m11 s12">
-        <label for="description"><b><strong>Reason for leave</b></strong></label>    
-        <textarea id="description" name="description" class="materialize-textarea" length="500" required></textarea>
+
+    <div class="row row-e">
+        <div class="input-field col-12 col-md-1">
+            <label><b><strong>5.</b></strong></label>
+        </div>
+        <div class="input-field col-12 col-md-11">
+            <label for="description"><b><strong>Reason for leave</b></strong></label>    
+            <textarea id="description" name="description" class="materialize-textarea" length="500" required></textarea>
+        </div>
     </div>
-</div>
 
 <!-- pop up form =================================================================================================-->
 
-<div class="row row-e1">
-    <div class="input-field col m1 s12">
-        <label><b><strong>6.</b></strong></label>
+    <div class="row row-e1">
+        <div class="input-field col-12 col-md-1">
+            <label><b><strong>6.</b></strong></label>
+        </div>
+        <div class="input-field col-12 col-md-3">
+            <label><b><strong>Whether Station Leave permission required or not</b></strong></label>
+        </div>
+        <div class="input-field col-12 col-md-2">
+            <label for="stdate"><b><strong>Yes/No</b></strong></label>
+            <input id="stdate" name="stno"  type="text" required>
+        </div>
     </div>
-    <div class="input-field col m3 s12">
-        <label><b><strong>Whether Station Leave permission required or not</b></strong></label>
-    </div>
-    <div class="input-field col m2 s12">
-        <label for="stdate"><b><strong>Yes/No</b></strong></label>
-        <input id="stdate" name="stno"  type="text" required>
-    </div>
-</div>
 
-<div class="row row-e2">
-    <div class="input-field col m1 s12">
-        <label><b><strong>7.</b></strong></label>
+    <div class="row row-e2">
+        <div class="input-field col-12 col-md-1">
+            <label><b><strong>7.</b></strong></label>
+        </div>
+        <div class="input-field col-12 col-md-6">
+            <label><b><strong>Are you holding any other position like HOD, HOC, HOS, Warden,Chairman of a Committee etc. If so, please enclose the approval/
+            consent of appropriate authority for the period of leave.</b></strong></label>
+        </div>
+        <div class="input-field col-12 col-md-3">
+            <label for="hold"><b><strong>Yes(Mention) / No</b></strong></label>
+            <input id="hold" name="yposition"  type="text" required >
+        </div>
+            
     </div>
-    <div class="input-field col m6 s12">
-        <label><b><strong>Are you holding any other position like HOD, HOC, HOS, Warden,Chairman of a Committee etc. If so, please enclose the approval/
-        consent of appropriate authority for the period of leave.</b></strong></label>
-    </div>
-    <div class="input-field col m3 s12">
-        <label for="hold"><b><strong>Yes(Mention) / No</b></strong></label>
-        <input id="hold" name="yposition"  type="text" required >
-    </div>
-        
-</div>
                 
 
         
@@ -423,60 +432,61 @@ while($row_lists=pg_fetch_array($query))
 <!-- ---------------------------------------------------------------------------pop up form end -->
 
 
-<div class="row row-e3">
-        <div class="input-field col m1 s12">
-            <label><b><strong>8.</b></strong></label>
-        </div>
-        <div class="input-field col m6 s12">
-        <label><b><strong>Arrangement for classes during the
-        proposed leave (for faculty members)</b></strong></label>
-        </div>
+    <div class="row row-e3">
+            <div class="input-field col-12 col-md-1">
+                <label><b><strong>8.</b></strong></label>
+            </div>
+            <div class="input-field col-12 col-md-6">
+            <label><b><strong>Arrangement for classes during the
+            proposed leave (for faculty members)</b></strong></label>
+            </div>
 
-        <div class="input-field col m3 s12">
-        <label for="noc"><b><strong>No. of Classes Missed</b></strong></label>
-        <input id="noc" name="noc" type="text" required >
-        </div>
+            <div class="input-field col-12 col-md-3">
+            <label for="noc"><b><strong>No. of Classes Missed</b></strong></label>
+            <input id="noc" name="noc" type="text" required >
+            </div>
 
-        <div class="input-field col m2 s12">
-        <label for="aa"><b><strong>Alt. Arrangement</b></strong></label>
-        <input id="aa" name="alterarr" type="text" required >
-        </div>
+            <div class="input-field col-12 col-md-2">
+            <label for="aa"><b><strong>Alt. Arrangement</b></strong></label>
+            <input id="aa" name="alterarr" type="text" required >
+            </div>
+    </div>
+
+    <div class="row row-e4">
+            <div class="input-field col-12 col-md-1">
+                <label><b><strong>9.</b></strong></label>
+            </div>
+            <div class="input-field col-12 col-md-6">
+            <label class="active" for="address" ><b><strong>Address while on leave</b></strong></label>    
+            <input id="address" name="address" type="text" length="500" value="<?php echo $add;?>" required>
+            </div>
+            <div class="input-field col-12 col-md-3">
+            <label class="active" for="mobileno"><b><strong>Contact Phone No. </b></strong></label>
+            <input id="mobileno" name="mobileno" type="text" value="<?php echo $phn;?>" required >
+            </div>
+            <div class="input-field col-12 col-md-2">
+            <label class="active" for="pin"><b><strong>Pin</b></strong></label>
+            <input id="pin" name="pin" type="text" value="<?php echo $pincode;?>" required >
+            </div>
+
+    </div>
+
+    <div class="row row-f">
+            <button type="submit" name="apply" id="apply" class="waves-effect waves-light btn indigo m-b-xs">Apply</button>
+    </div>                                             
 </div>
-
-<div class="row row-e4">
-        <div class="input-field col m1 s12">
-            <label><b><strong>9.</b></strong></label>
-        </div>
-        <div class="input-field col m6 s12">
-        <label for="address"><b><strong>Address while on leave</b></strong></label>    
-        <input id="address" name="address" type="text" length="500" value="<?php echo $add;?>" required>
-        </div>
-        <div class="input-field col m3 s12">
-        <label for="mobileno"><b><strong>Contact Phone No. </b></strong></label>
-        <input id="mobileno" name="mobileno" type="text" value="<?php echo $phn;?>" required >
-        </div>
-        <div class="input-field col m2 s12">
-        <label for="pin"><b><strong>Pin</b></strong></label>
-        <input id="pin" name="pin" type="text" value="<?php echo $pincode;?>" required >
-        </div>
-
 </div>
-
-<div class="row row-f">
-        <button type="submit" name="apply" id="apply" class="waves-effect waves-light btn indigo m-b-xs">Apply</button></div>                                             
-</div>
-                                                </div>
-                                            </div>
+                                            <!-- </div>
                                         </section>
-                                      </section>
-                                    </div>
+                                      </section> -->
+                                    <!-- </div> -->
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
-        </div>
+        <!-- </div> -->
         <div class="left-sidebar-hover"></div>
         
         <!-- Javascripts -->
