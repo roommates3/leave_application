@@ -88,7 +88,7 @@ $error="Something went wrong. Please try again";
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col-12 col-lg-6">
                 <div class="card rounded">
                     <div class="card-content">
                         <!-- <div class="row"> -->
@@ -118,7 +118,7 @@ $error="Something went wrong. Please try again";
 
 
 
-                                <div class="input-field col s12">
+                                <div class="input-field col-12">
                                     <button type="submit" name="add"
                                         class="waves-effect waves-light btn red m-b-xs rounded-pill">ADD</button>
 
