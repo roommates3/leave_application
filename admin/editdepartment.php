@@ -70,15 +70,15 @@ $msg="Department updated Successfully";
        <?php include('includes/sidebar.php');?>
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Update Department</div>
                     </div>
-                    <div class="col s12 m12 l6">
+                    <div class="col-12 col-lg-6">
                         <div class="card">
                             <div class="card-content">
                               
                                 <div class="row">
-                                    <form class="col s12" name="chngpwd" method="post">
+                                    <form class="col-12" name="chngpwd" method="post">
                                           <?php if($error){?><div class="errorWrap"><strong>ERROR</strong>:<?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo htmlentities($msg); ?> </div><?php }?>
 <?php 
@@ -96,26 +96,29 @@ if(pg_num_rows($query) > 0)
     {               ?>  
     
                                             <div class="row">
-                                                <div class="input-field col s12">
+                                                <div class="input-field col-12">
+                                                <label for="deptname">Department Name</label>
     <input id="departmentname" type="text"  class="validate" autocomplete="off" name="departmentname" value="<?php echo $row_list['deptname'];?>"  required>
-                                                    <label for="deptname">Department Name</label>
+                                                    
                                                 </div>
     
     
-              <div class="input-field col s12">
+              <div class="input-field col-12">
+              <label for="deptshortname">Department Short Name</label>
     <input id="departmentshortname" type="text"  class="validate" autocomplete="off" value="<?php echo $row_list['deptshortname'];?>" name="departmentshortname"  required>
-                                                    <label for="deptshortname">Department Short Name</label>
+                                                    
                                                 </div>
-                                                <div class="input-field col s12">
+                                                <div class="input-field col-12">
+                                                <label for="deptshortname">Department Id</label>
     <input id="departmentid" type="text"  class="validate" autocomplete="off" value="<?php echo $row_list['did'];?>" name="depid"  required>
-                                                    <label for="deptshortname">Department Id</label>
+                                                    
                                                 </div>
 
 <?php }} ?>
 
 
 <div class="input-field col s12">
-<button type="submit" name="update" class="waves-effect waves-light btn indigo m-b-xs">UPDATE</button>
+<button type="submit" name="update" class="waves-effect waves-light btn red m-b-xs rounded-pill">UPDATE</button>
 
 </div>
 

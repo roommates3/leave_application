@@ -87,20 +87,20 @@ else{
                 </div>
             </main>
         </div> -->
-        <body class="admin-signin">
+        <body>
         <div class="container">
         <div class="row text-center">
             <div class="col">
-            <h3 class="text-capitalize"><a href="../index.php" >Leave Management System | Admin Login</a></h3>
+            <h3 class="text-capitalize text-dark"><a href="../index.php" >Leave Management System | Admin Login</a></h3>
             </div>
             </div>
         </div>
         <div class="container w-75 ">
                     <!-- <main class="mn-inner container"> -->
             
-                      <div class="row shadow-lg rounded bg-white p-4">
+                      <div class="row shadow-lg rounded bg-white p-4" style="border-radius:15px !important;">
                             <div class="col-4 p-0">
-                            <img src="../assets/images/admin.jpg" alt="" class="img-fluid admin-img rounded">
+                            <img src="../assets/images/admin.jpg" alt="" class="img-fluid admin-img rounded" style="border-radius:15px !important;">
                             </div>
                           <div class="col my-auto">
                               <div class="card" style="height:100%; box-shadow: none; border:none;">

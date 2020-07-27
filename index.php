@@ -48,7 +48,6 @@ else{
         <meta charset="UTF-8">
         <meta name="description" content="Responsive Admin Dashboard Template" />
         <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
 
         <!-- Styles -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -157,31 +156,30 @@ $_SESSION['dept']=$row1;
             <div class="card-title text-center text-capitalize"><h4>WELCOME TO STAFF LEAVE MANAGEMENT SYSTEM</h4></div>
 
                 <div class="row w-75">
-                        <div class="col-12 ">
-                            <div class="card white darken-1" style="height:80%">
+                        <div class="col-12">
+                            <div class="card white darken-1">
                                 <div class="card-content ">
-                                    
-                                    <div class="row ">
-                                    <div class="col-6">
-                        <img src="assets/images/admin.jpg" class="img-fluid rounded-lg" style="height:85%" alt="">
-                    </div>
-                                        <div class="col-6 ">
-                                        <span class="card-title text-center" style="font-size:20px;">Staff Login</span>
-                                        <?php if($msg){?><div class="errorWrap"><strong>Error</strong> : <?php echo $msg; ?> </div><?php }?>
-                                        <form name="signin" method="post">
-                                            <div class="input-field col s12">
-                                                <input id="username" type="text" name="gmailid" class="validate" autocomplete="off" required >
-                                                <label for="email">Email Id</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input id="password" type="password" class="validate" name="password" autocomplete="off" required>
-                                                <label for="password">Password</label>
-                                            </div>
-                                            <div class="col s12 right-align m-t-sm">
+                                    <div class="row p-0">
+                                        <div class="col-12 col-md-6 p-0">
+                                            <img src="assets/images/admin.jpg" class="img-fluid rounded-lg" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-6 my-auto">
+                                            <span class="text-center pl-2" style="font-size:20px;">Staff Login</span>
+                                            <?php if($msg){?><div class="errorWrap"><strong>Error</strong> : <?php echo $msg; ?> </div><?php }?>
+                                            <form name="signin" method="post">
+                                                <div class="input-field col s12">
+                                                    <input id="username" type="text" name="gmailid" class="validate" autocomplete="off" required >
+                                                    <label for="email">Email Id</label>
+                                                </div>
+                                                <div class="input-field col s12">
+                                                    <input id="password" type="password" class="validate" name="password" autocomplete="off" required>
+                                                    <label for="password">Password</label>
+                                                </div>
+                                                <div class="col s12 center-align m-t-sm">
 
-                                                <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo">
-                                            </div>
-                                        </form>
+                                                    <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo rounded-pill">
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>

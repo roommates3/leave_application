@@ -14,11 +14,10 @@ $stmt=<<<EOF
 select designation from staff where gmailid='$sql1';
 EOF;
 $query1=pg_query($stmt);
-
+// echo pg_num_rows($query1);
 if(isset($_POST['update']))
 {
 
-    
 $name=$_POST['name'];  
 $gender=$_POST['gender']; 
 $doj=$_POST['doj']; 
@@ -29,11 +28,11 @@ $quarterno=$_POST['quarterno'];
 $designation=$_POST['designation'];
 $mobileno=$_POST['mobileno'];
 
-$sql=<<<EOF
+$sql0=<<<EOF
 update staff set name='$name',Gender='$gender',did='$department',designation='$designation',doj='$doj',quarter_no='$quarterno',permanent_address='$address',phoneno='$mobileno',pin='$pin' where gmailid='$stfid';
 EOF;
-$query = pg_query($sql);
-if(pg_num_rows($query) > 0)
+$query0 = pg_query($sql0);
+if(pg_affected_rows($query0) > 0)
 {
     $msg="Staff record updated Successfully";
 
@@ -41,9 +40,7 @@ if(pg_num_rows($query) > 0)
 else {
     $error="Staff record updating error | Error ";    
 }
-}
-
-    ?>
+}?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +91,12 @@ else {
 
     <?php   while ($row=pg_fetch_array($query1))
 { ?>
-    <?php if($row['designation'] == 'Director' or $row['designation'] == 'HOD')
+    <?php if($row['designation'] == 'Director')
+    {?>
+    <?php include('includes/stf-header.php');?>
+
+        <?php include('includes/stfsidebar.php');?>
+    <?php }else if($row['designation'] == 'HOD')
     {?>
     <?php include('includes/hodheader.php');?>
 
@@ -127,14 +129,14 @@ else {
 $stfid=$_SESSION['stflogin'];
 $sql =<<<EOF
 SELECT sid,name,gmailid,phoneno,doj,gender,designation,
-quarter_no,permanent_address,pin,deptname from staff join department on staff.did=department.did where gmailid='$stfid';
+quarter_no,permanent_address,pin,deptname,staff.did as staffdid from staff join department on staff.did=department.did where gmailid='$stfid';
 EOF;
 $query=pg_query($sql);
 $cnt=1;
 if(pg_num_rows($query)> 0)
 {
 while($row_list=pg_fetch_array($query))
-{               ?>
+{   ?>
 
  <div class="input-field col-12">
 <label for="stfcode">Staff Code</label>
@@ -144,8 +146,8 @@ while($row_list=pg_fetch_array($query))
 
 
 <div class="input-field col-12">
-<label for="fullname">Full name</label>
-<input id="fullname" name="fullname" value="<?php echo $row_list['name'];?>"  type="text" required>
+<label for="name">Full name</label>
+<input id="name" name="name" value="<?php echo $row_list['name'];?>"  type="text" required>
 </div>
 
 
@@ -178,14 +180,13 @@ while($row_list=pg_fetch_array($query))
 <div class="input-field col-12 col-md-6">
 <label for="joindate">Date of Join</label>
 <input id="joindate" name="doj"  class="datepicker" value="<?php echo $row_list['doj'];?>" readonly >
-
 </div>
 
                                                     
 
 <div class="input-field col-12 col-md-6">
 <select  name="department" autocomplete="off">
-<option value="<?php echo $row_list['did'];?>"><?php echo $row_list['deptname'];?></option>
+<option value="<?php echo $row_list['staffdid'];?>"><?php echo $row_list['deptname'];?></option>
 <?php 
 $sql =<<<EOF
 SELECT did,deptname from department;
@@ -235,7 +236,7 @@ while($row_lists=pg_fetch_array($query))
                                                 </div>
                                             </div>
                                         </section>
-s                                    </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
