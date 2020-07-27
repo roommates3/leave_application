@@ -7,7 +7,15 @@ if(strlen($_SESSION['alogin'])==0)
 header('location:index.php');
 }
 else{
-
+if(isset($_GET['del']))
+{
+$id=$_GET['del'];
+$sql =<<<EOF
+delete from staff  WHERE id='$id';
+EOF;
+$query=pg_query($sql);
+$msg="Staff record deleted";
+}
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -105,7 +113,8 @@ while($row_list=pg_fetch_array($query))
                                             <td width='100';><?php echo $row_list['phoneno'];?></td>
                                             <td width='70';><?php echo $row_list['pin'];?></td>
                                             <td width='200';><?php echo $row_list['permanent_address'];?></td>
-                                            <td width='50';><a href="editstaff.php?stfid=<?php echo $row_list['id'];?>"><i class="fas fa-edit    "></i></a></td>
+                                            <td width='50';><a href="editstaff.php?stfid=<?php echo $row_list['id'];?>"><i class="fas fa-edit    "></i></a>
+                                            <a href="managestaff.php?del=<?php echo $row_list['id'];?>" onclick="return confirm('Do you want to delete');"><i class="fas fa-trash-alt  "></i> </a></td>
                                         </tr>
                                          <?php $cnt++;} }?>
                                     </tbody>
