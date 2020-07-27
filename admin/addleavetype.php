@@ -11,12 +11,15 @@ if(isset($_POST['add']))
 {
 $leavetype=$_POST['leavetype'];
 $description=$_POST['description'];
+if ($description==""){
+    $description="NULL";
+}
 $ttllv=$_POST['total'];
 $sql=<<<EOF
 INSERT INTO leavetype(leavetype,description,totalleaves) VALUES('$leavetype','$description','$ttllv');
 EOF;
 $query=pg_query($sql);
-$lastInsertId = pg_num_rows($query);
+$lastInsertId = pg_affected_rows($query);
 if($lastInsertId>0)
 {
 $msg="Leave type added Successfully";
