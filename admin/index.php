@@ -108,7 +108,7 @@ else{
                                       <span class="card-title text-center"><h1>Sign In</h1></span>
                                        <div class="row">
                                            <form class="col s12" name="signin" method="post">
-                                               <div class="input-field col s12">
+                                               <div class="input-field col-12">
                                                    <input id="username" type="text" name="username" class="validate pl-4 border border-teal rounded" autocomplete="off" required >
                                                    <label for="email" class="pl-4">Username</label>
                                                </div>
@@ -118,9 +118,12 @@ else{
                                                </div>
                                                <div class="col s12 text-center m-t-sm">
                                                 
-                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo">
+                                                   <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo rounded-pill">
                                                </div>
                                            </form>
+                                           <div class="col-12 text-center m-t-sm">
+                                                    <a href="../index.php"><button class="btn bg-white text-dark rounded-pill" style="border:1px solid #3f51b5 ;">Staff Login</button></a>
+                                               </div>
                                       </div>
                                   </div>
                               </div>
