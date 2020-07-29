@@ -21,15 +21,18 @@ $designation=$_POST['designation'];
 $department=$_POST['department']; 
 $gmailid=$_POST['gmail']; 
 $password=md5($_POST['password']);
-
-
+$cfmpassword=md5($_POST['confirmpassword']);
+if($cfmpassword==$password){
 $sql=<<<EOF
 INSERT INTO staff(sid, name, gender, permanent_address, quarter_no, doj, designation, did, gmailid, password, phoneno,pin) VALUES($sid,'$name','$gender','$address', '$quarterno','$doj','$designation','$department','$gmailid','$password','$mobileno','$pin');
 EOF;
 $query=pg_query($sql);
 if(pg_num_rows($query)>0)
 {
-$msg="Employee record added Successfully";
+$msg="Staff record added Successfully";
+}
+}else{
+$error="Staff record adding Unsuccessful | Password Mismatch !!";
 }
 }
 ?>
@@ -77,7 +80,7 @@ $msg="Employee record added Successfully";
 <script type="text/javascript">
 function valid()
 {
-if(document.addstaff.password.value!= document.addstaff.confirmpassword.value)
+if(document.addstaff.password.value != document.addstaff.confirmpassword.value)
 {
 alert("New Password and Confirm Password Field do not match  !!");
 document.addstaff.confirmpassword.focus();
@@ -243,7 +246,7 @@ if(pg_num_rows($query)>0)
 
                                                         
 <div class="input-field col s12">
-<button type="submit" name="add" onclick="return valid();" id="add" class="waves-effect waves-light btn red m-b-xs rounded-pill">ADD</button>
+<button type="submit" name="add" onclick="valid();" id="add" class="waves-effect waves-light btn red m-b-xs rounded-pill">ADD</button>
 
 </div>
 

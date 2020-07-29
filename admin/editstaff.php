@@ -85,7 +85,7 @@ SELECT * from staff where id='$eid';
 EOF;
 $query=pg_query($sql);
 $cnt=1;
-if(pg_num_rows($query) > 0)
+if(pg_affected_rows($query) > 0)
 {
 while($row_lists=pg_fetch_array($query))
 {               ?> 
@@ -169,7 +169,7 @@ while($row_lists=pg_fetch_array($query))
 
                                                         
 <div class="input-field col-12">
-<button type="submit" name="update"  id="update" class="waves-effect waves-light btn indigo m-b-xs">UPDATE</button>
+<button type="submit" name="update"  id="update" class="waves-effect waves-light btn red m-b-xs rounded-pill">UPDATE</button>
 
 </div>
 <?php }}?>

@@ -114,18 +114,18 @@ $query=pg_query($sql);
 $results=pg_fetch_all($query);
 // echo $results;
 $cnt=1;
-if(pg_num_rows($query) > 0)
+if(pg_affected_rows($query) > 0)
 {
 while($row_lists=pg_fetch_array($query))
 {       $fwdstatus=$row_lists['fwdstatus'];  
       ?>  
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title" style="font-size:24px;">Leave Details</div>
                     </div>
                    
-                    <div class="col s12 m12 l12">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-content">
                                 <span class="card-title">Leave Details</span>
