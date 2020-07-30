@@ -117,7 +117,7 @@ if(pg_num_rows($query) > 0)
 <?php }} ?>
 
 
-<div class="input-field col s12">
+<div class="input-field col-12">
 <button type="submit" name="update" class="waves-effect waves-light btn red m-b-xs rounded-pill">UPDATE</button>
 
 </div>

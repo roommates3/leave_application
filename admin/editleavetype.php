@@ -72,15 +72,15 @@ $msg="Leave type updated Successfully";
        <?php include('includes/sidebar.php');?>
             <main class="mn-inner">
                 <div class="row">
-                    <div class="col s12">
+                    <div class="col-12">
                         <div class="page-title">Edit Leave Type</div>
                     </div>
-                    <div class="col s12 m12 l6">
+                    <div class="col-12 col-lg-6">
                         <div class="card">
                             <div class="card-content">
                               
                                 <div class="row">
-                                    <form class="col s12" name="chngpwd" method="post">
+                                    <form class="col-12" name="chngpwd" method="post">
                                           <?php if($error){?><div class="errorWrap"><strong>ERROR</strong> : <?php echo htmlentities($error); ?> </div><?php } 
                 else if($msg){?><div class="succWrap"><strong>SUCCESS</strong> : <?php echo $msg; ?> </div><?php }?>
 <?php
@@ -96,18 +96,18 @@ while($row_lists=pg_fetch_array($query))
 {               ?>  
 
                                         <div class="row">
-                                            <div class="input-field col s12">
+                                            <div class="input-field col-12">
                                                 <input id="leavetype" type="text"  class="validate" autocomplete="off" name="leavetype" value="<?php echo $row_lists['leavetype'];?>"  required>
                                                 <label for="leavetype">Leave Type</label>
                                             </div>
 
 
-                                            <div class="input-field col s12">
+                                            <div class="input-field col-12">
                                                 <textarea id="textarea1" name="description" class="materialize-textarea" name="description" length="500"><?php echo $row_lists['description'];?></textarea>
                                                 <label for="deptshortname">Description</label>
                                             </div>
 
-                                            <div class="input-field col s12">
+                                            <div class="input-field col-12">
                                                 <input id="leavetype" type="text"  class="validate" autocomplete="off" name="total" value="<?php echo $row_lists['totalleaves'];?>"  required>
                                                 <label for="leave">Total leaves</label>
                                             </div>
@@ -116,8 +116,8 @@ while($row_lists=pg_fetch_array($query))
 
 
 
-<div class="input-field col s12">
-<button type="submit" name="update" class="waves-effect waves-light btn indigo m-b-xs">Update</button>
+<div class="input-field col-12">
+<button type="submit" name="update" class="waves-effect waves-light btn red m-b-xs rounded-pill">Update</button>
 
 </div>
 

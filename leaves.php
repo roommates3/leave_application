@@ -61,7 +61,12 @@ $query1=pg_query($stmt);
     <body>
     <?php while ($row=pg_fetch_array($query1))
 {
-    if($row['designation'] == 'Director' or $row['designation'] == 'HOD')
+    if($row['designation'] == 'Director')
+    {?>
+    <?php include('includes/stf-header.php');?>
+
+        <?php include('includes/stfsidebar.php');?>
+    <?php }else if($row['designation'] == 'HOD')
     {?>
     <?php include('includes/hodheader.php');?>
 
