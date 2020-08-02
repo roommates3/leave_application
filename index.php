@@ -152,6 +152,7 @@ $_SESSION['dept']=$row1;
                 </ul>
                 </div>
             </aside>
+<<<<<<< HEAD
             <main class="mn-inner">
             <div class="card-title text-center text-capitalize"><h4>WELCOME TO STAFF LEAVE MANAGEMENT SYSTEM</h4></div>
 
@@ -177,6 +178,32 @@ $_SESSION['dept']=$row1;
                                                 </div>
                                                 <div class="col s12 center-align m-t-sm">
 
+=======
+            <main class="mn-inner pt-0">
+            <div class="card-title text-center"><h4>WELCOME TO STAFF LEAVE MANAGEMENT SYSTEM</h4></div>
+
+                <div class="row sign-in-form">
+                        <div class="col-12">
+                            <div class="card white darken-1">
+                                <div class="card-content ">
+                                    <div class="row mb-0">
+                                        <div class="col-12 col-md-5 p-0 card-img-new">
+                                            <img src="assets/images/admin.jpg" class="img-fluid" style="" alt="">
+                                        </div>
+                                        <div class="col-12 col-md-7 my-auto">
+                                            <div class="text-center pb-3 pt-2" style="font-size:20px;">STAFF LOGIN</div>
+                                            <?php if($msg){?><div class="errorWrap"><strong>Error</strong> : <?php echo $msg; ?> </div><?php }?>
+                                            <form name="signin" method="post">
+                                                <div class="input-field col-12">
+                                                    <input id="username" type="text" name="gmailid" class="validate rounded-pill border border-primary pl-4" autocomplete="off" required >
+                                                    <label for="email" class="pl-4 pb-2">Email Id</label>
+                                                </div>
+                                                <div class="input-field col-12">
+                                                    <input id="password" type="password" class="validate rounded-pill border border-primary pl-4" name="password" autocomplete="off" required>
+                                                    <label for="password" class="pl-4 pb-2">Password</label>
+                                                </div>
+                                                <div class="col-12 center-align m-t-sm">
+>>>>>>> b4c87c9406a37295a4e102f5585a364e11daf598
                                                     <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo rounded-pill">
                                                 </div>
                                             </form>

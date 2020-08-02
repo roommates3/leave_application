@@ -107,6 +107,7 @@ else{
                                   <div class="card-content ">
                                       <span class="card-title text-center"><h1>Sign In</h1></span>
                                        <div class="row">
+<<<<<<< HEAD
                                            <form class="col s12" name="signin" method="post">
                                                <div class="input-field col-12">
                                                    <input id="username" type="text" name="username" class="validate pl-4 border border-teal rounded" autocomplete="off" required >
@@ -117,6 +118,18 @@ else{
                                                    <label for="password" class="pl-4" >Password</label>
                                                </div>
                                                <div class="col s12 text-center m-t-sm">
+=======
+                                           <form class="col-12" name="signin" method="post">
+                                               <div class="input-field col-12">
+                                                   <input id="username" type="text" name="username" class="validate pl-4 border border-primary rounded-pill" autocomplete="off" required >
+                                                   <label for="email" class="pl-4 pb-2">Username</label>
+                                               </div>
+                                               <div class="input-field col-12">
+                                                   <input id="password" type="password" class="validate pl-4 border border-primary rounded-pill " name="password" autocomplete="off" required>
+                                                   <label for="password" class="pl-4 pb-2" >Password</label>
+                                               </div>
+                                               <div class="col-12 text-center m-t-sm">
+>>>>>>> b4c87c9406a37295a4e102f5585a364e11daf598
                                                 
                                                    <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo rounded-pill">
                                                </div>
