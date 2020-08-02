@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #PROJECT TITLE
 Leave management system (Web-based): A leave management system for teaching and non-teaching staffs of IIIT Senapati, Manipur.
 
@@ -36,7 +35,6 @@ using "psql -U dbuser leave < leave.pgsql"
 
 # PROCEDURE
     -In any browser(Firefox, Chrome... etc) type in address-bar.
->>>>>>> b4c87c9406a37295a4e102f5585a364e11daf598
     -To Admin login page : localhost/leave_management_system/admin/
         loginid='admin'
         password='Test@12345'
