@@ -145,7 +145,7 @@ $_SESSION['dept']=$row1;
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion" style="">
                     <li>&nbsp;</li>
                     <li class="no-padding"><a class="waves-effect waves-grey text-white" href="index.php"><i class="fas fa-portrait    "></i>Staff Login</a></li>
-                    <li class="no-padding"><a class="waves-effect waves-grey text-white" href="forgot-password.php"><i class="fas fa-portrait    "></i>Staff Password Recovery</a></li>
+<!--                     <li class="no-padding"><a class="waves-effect waves-grey text-white" href="forgot-password.php"><i class="fas fa-portrait    "></i>Staff Password Recovery</a></li> -->
 
                        <li class="no-padding"><a class="waves-effect waves-grey text-white" href="admin/"><i class="fas fa-portrait    "></i>Admin Login</a></li>
 
