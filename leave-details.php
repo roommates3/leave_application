@@ -157,10 +157,7 @@ if (pg_num_rows($query1)>0)
 
     <body>
  
-<<<<<<< HEAD
-    <?php if($des == 'Director' or $des == 'HOD')
-    { ?>
-=======
+
     <?php if($des == 'Director')
     {?>
     <?php include('includes/stf-header.php');?>
@@ -168,7 +165,6 @@ if (pg_num_rows($query1)>0)
         <?php include('includes/stfsidebar.php');?>
     <?php }else if($des == 'HOD')
     {?>
->>>>>>> b4c87c9406a37295a4e102f5585a364e11daf598
     <?php include('includes/hodheader.php');?>
 
         <?php include('includes/stfsidebar.php');?>
