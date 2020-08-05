@@ -227,7 +227,7 @@ while($row_lists=pg_fetch_array($query))
 <?php }}?>
                                                         
 <div class="input-field col-12">
-<button type="submit" name="update"  id="update" class="waves-effect waves-light btn indigo m-b-xs">UPDATE</button>
+<button type="submit" name="update"  id="update" class="waves-effect waves-light btn indigo m-b-xs rounded-pill">UPDATE</button>
 
 </div>
 
