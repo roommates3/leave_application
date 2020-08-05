@@ -60,7 +60,7 @@ if (pg_num_rows($query1)>0)
         <main class="mn-inner">
             <div class="middle-content">
                 <div class="row no-m-t no-m-b">
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -81,7 +81,7 @@ $tlcount = pg_num_rows($query);
                     </div>
 
 <!-- =============================================================================================================                     -->
-                        <div class="col s12 m12 l3">
+                        <div class="col-12 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -102,7 +102,7 @@ $Clcount=pg_num_rows($query);
                     </div>
 
 
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                             
@@ -122,7 +122,7 @@ $Clcount=pg_num_rows($query);
                     </div>
 <!-- =============================================================================================================                     -->
 
-                    <div class="col s12 m12 l3">
+                    <div class="col-12 col-lg-3">
                         <div class="card stats-card">
                             <div class="card-content">
                                 <span class="card-title">Not Approved Leaves</span>
@@ -146,7 +146,7 @@ $clcount=pg_num_rows($query);
                 </div>
                  
                     <div class="row no-m-t no-m-b">
-                        <div class="col s12 m12 l12">
+                        <div class="col-12">
                             <div class="card invoices-card">
                                 <div class="card-content">
                                  

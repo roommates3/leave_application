@@ -40,9 +40,10 @@ else if($status==2){
 
 if($status==1)
 {
+$st1=1;
 $lid1=intval($_GET['leaveid']);
 $sql12=<<<EOF
-select sid,status,leavetype from leavetable where id='$lid1';
+select sid,status,leavetype from leavetable where id='$lid1' and status='$st1';
 EOF;
 $query12=pg_query($sql12);
                 if (pg_num_rows($query12)>0){
@@ -51,7 +52,7 @@ $query12=pg_query($sql12);
                         $lvtype=$row12['leavetype'];
                         $st=$row12['status'];
 $stmt=<<<EOF
-select id from leavetable where sid='$sid' and leavetype='$lvtype' and status='$st';
+select id from leavetable where sid='$sid' and leavetype='$lvtype';
 EOF;
 $querystmt=pg_query($stmt);
 $num=pg_num_rows($querystmt);
@@ -280,7 +281,7 @@ if($stats==0 and $fwdstatus==0)
 
 <tr>
 <td colspan="5">
-<a class="modal-trigger waves-effect waves-light btn" href="#modal1">Take&nbsp;Action</a>
+<a class="modal-trigger waves-effect waves-light btn indigo rounded-pill" href="#modal1">Take&nbsp;Action</a>
 <form name="adminaction" method="post">
 <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
     <div class="modal-content" style="width:90%">
@@ -294,7 +295,7 @@ if($stats==0 and $fwdstatus==0)
                                         <p><textarea id="textarea1" name="description" class="materialize-textarea" name="description" placeholder="Description" length="500" maxlength="500" required></textarea></p>
     </div>
     <div class="modal-footer" style="width:90%">
-       <input type="submit" class="waves-effect waves-light btn blue m-b-xs" name="update" value="Submit">
+       <input type="submit" class="waves-effect waves-light btn indigo m-b-xs rounded-pill" name="update" value="Submit">
     </div>
 </div>   
 </td>
@@ -305,7 +306,7 @@ if($stats==0 and $fwdstatus==0)
             <?php if ($des=='Director'){?>
             <tr>
             <td colspan="5">
-            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Take&nbsp;Action</a>
+            <a class="modal-trigger waves-effect waves-light btn indigo rounded-pill" href="#modal1">Take&nbsp;Action</a>
             <form name="adminaction" method="post">
             <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
                 <div class="modal-content" style="width:90%">
@@ -318,7 +319,7 @@ if($stats==0 and $fwdstatus==0)
                                                     <p><textarea id="textarea1" name="description" class="materialize-textarea" name="description" placeholder="Description" length="500" maxlength="500" required></textarea></p>
                 </div>
                 <div class="modal-footer" style="width:90%">
-                <input type="submit" class="waves-effect waves-light btn blue m-b-xs" name="update" value="Submit">
+                <input type="submit" class="waves-effect waves-light btn indigo m-b-xs rounded-pill" name="update" value="Submit">
                 </div>
             </div>   
             </td>
@@ -327,7 +328,7 @@ if($stats==0 and $fwdstatus==0)
 <?php } elseif($stats==2 and $fwdstatus==3) {?>
             <tr>
             <td colspan="5">
-            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Rejected!</a>
+            <a class="modal-trigger waves-effect waves-light btn indigo disabled" href="#modal1">Rejected!</a>
             <form name="adminaction" method="post">
             <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
                 <div class="modal-content" style="width:90%">
@@ -345,7 +346,7 @@ if($stats==0 and $fwdstatus==0)
 <?php } elseif($stats==1) {?>
             <tr>
             <td colspan="5">
-            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">&nbsp;Approved!</a>
+            <a class="modal-trigger waves-effect waves-light btn indigo disabled" href="#modal1">&nbsp;Approved!</a>
             <form name="adminaction" method="post">
             <div id="modal1" class="modal modal-fixed-footer" style="height: 60%">
                 <div class="modal-content" style="width:90%">

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 060323f01bad6d943e47a06de09171906d723550
 # PROJECT TITLE
     Leave management system (Web-based): A leave management system for teaching and non-teaching staffs of IIIT Senapati, Manipur.
 
