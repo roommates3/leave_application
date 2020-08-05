@@ -152,33 +152,7 @@ $_SESSION['dept']=$row1;
                 </ul>
                 </div>
             </aside>
-<<<<<<< HEAD
-            <main class="mn-inner">
-            <div class="card-title text-center text-capitalize"><h4>WELCOME TO STAFF LEAVE MANAGEMENT SYSTEM</h4></div>
 
-                <div class="row w-75">
-                        <div class="col-12">
-                            <div class="card white darken-1">
-                                <div class="card-content ">
-                                    <div class="row p-0">
-                                        <div class="col-12 col-md-6 p-0">
-                                            <img src="assets/images/admin.jpg" class="img-fluid rounded-lg" alt="">
-                                        </div>
-                                        <div class="col-12 col-md-6 my-auto">
-                                            <span class="text-center pl-2" style="font-size:20px;">Staff Login</span>
-                                            <?php if($msg){?><div class="errorWrap"><strong>Error</strong> : <?php echo $msg; ?> </div><?php }?>
-                                            <form name="signin" method="post">
-                                                <div class="input-field col s12">
-                                                    <input id="username" type="text" name="gmailid" class="validate" autocomplete="off" required >
-                                                    <label for="email">Email Id</label>
-                                                </div>
-                                                <div class="input-field col s12">
-                                                    <input id="password" type="password" class="validate" name="password" autocomplete="off" required>
-                                                    <label for="password">Password</label>
-                                                </div>
-                                                <div class="col s12 center-align m-t-sm">
-
-=======
             <main class="mn-inner pt-0">
             <div class="card-title text-center"><h4>WELCOME TO STAFF LEAVE MANAGEMENT SYSTEM</h4></div>
 
@@ -203,7 +177,6 @@ $_SESSION['dept']=$row1;
                                                     <label for="password" class="pl-4 pb-2">Password</label>
                                                 </div>
                                                 <div class="col-12 center-align m-t-sm">
->>>>>>> b4c87c9406a37295a4e102f5585a364e11daf598
                                                     <input type="submit" name="signin" value="Sign in" class="waves-effect waves-light btn indigo rounded-pill">
                                                 </div>
                                             </form>
